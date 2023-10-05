@@ -2,7 +2,7 @@ import logo from "../assets/logo.jpg"
 
 function Header() {
     return (
-        <header className="w-full h-[18vh] bg-[#808080] flex items-center justify-between gap-5 lg:px-48 px-5">
+        <header className="w-full h-[18vh] flex items-center justify-between gap-5 lg:px-48 px-5">
             <div >
                 <img src={logo} alt="logo" className="w-[100%] h-auto"/>
             </div>
