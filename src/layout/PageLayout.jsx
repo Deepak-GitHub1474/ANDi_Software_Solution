@@ -1,4 +1,4 @@
-
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 function PageLayout({ children }){
@@ -6,7 +6,7 @@ function PageLayout({ children }){
         <div>
             <Header />
             {children}
-
+            <Footer/>
         </div>
     );
 }
