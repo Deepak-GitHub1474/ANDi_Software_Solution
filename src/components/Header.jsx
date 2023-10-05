@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import logo from "../assets/logo.jpg";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
     const [isNavVisible, setIsNavVisible] = useState(false);
+    const location = useLocation();
 
     function toggleNav() {
         setIsNavVisible(!isNavVisible);
@@ -29,6 +30,11 @@ function Header() {
         }
     }, []);
 
+    // Function to determine if a link should be active
+    const isActiveLink = (path) => {
+        return location.pathname === path;
+    };
+
     return (
         <header className={`relative flex items-center justify-between gap-5 lg:px-48 px-5 ${headerClassName}`}>
 
@@ -36,16 +42,22 @@ function Header() {
                 <img src={logo} alt="logo" className="w-[100%] cursor-pointer rounded-full"/>
             </div>
 
-            <nav className={`${isNavVisible ? "absolute top-[7.5rem] w-[92%] cursor-pointer" : "absolute top-10 right-5 lg:block hidden"}`}>
+            <nav className={`${isNavVisible ? "absolute sm:left-32 left-5 top-[7.5rem] right-7" : "absolute top-10 right-5 lg:block hidden"}`}>
                 <ul className={`${isNavVisible ? "flex flex-col gap-3 text-lg" : "flex items-center justify-center gap-10 text-lg"}`}>
-                    <Link to="/"><li className="bg-[#e7171f] text-white py-[6px] px-3">Home</li></Link>
-                    <Link to="/about"><li className="bg-[#e7171f] text-white py-[6px] px-3">About Us</li></Link>
-                    <Link to="/software"><li className="bg-[#e7171f] text-white py-[6px] px-3">Cloude Software</li></Link>
+                    <Link to="/">
+                        <li className={`py-[6px] px-3 cursor-pointer ${isActiveLink("/") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>Home</li>
+                    </Link>
+                    <Link to="/about">
+                        <li className={`py-[6px] px-3 cursor-pointer ${isActiveLink("/about") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>About Us</li>
+                    </Link>
+                    <Link to="/software">
+                        <li className={`py-[6px] px-3 cursor-pointer ${isActiveLink("/software") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>Cloude Software</li>
+                    </Link>
                 </ul>
             </nav>
 
             <div onClick={toggleNav} className="absolute right-7 top-9 border border-gray-300 p-1 px-3 rounded-[4px] lg:hidden block cursor-pointer">
-                    <div className="bg-[url(./assets/hamberger.svg)] bg-cover bg-center w-8 h-8"></div>
+                <div className="bg-[url(./assets/hamberger.svg)] bg-cover bg-center w-8 h-8"></div>
             </div>
         </header>
     );
