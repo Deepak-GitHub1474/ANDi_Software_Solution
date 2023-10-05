@@ -39,7 +39,7 @@ function Header() {
             <nav className={`${isNavVisible ? "absolute top-[7.5rem] w-[92%] cursor-pointer" : "absolute top-10 right-5 lg:block hidden"}`}>
                 <ul className={`${isNavVisible ? "flex flex-col gap-3 text-lg" : "flex items-center justify-center gap-10 text-lg"}`}>
                     <Link to="/"><li className="bg-[#e7171f] text-white py-[6px] px-3">Home</li></Link>
-                    <Link to="/"><li className="bg-[#e7171f] text-white py-[6px] px-3">About Us</li></Link>
+                    <Link to="/about"><li className="bg-[#e7171f] text-white py-[6px] px-3">About Us</li></Link>
                     <Link to="/software"><li className="bg-[#e7171f] text-white py-[6px] px-3">Cloude Software</li></Link>
                 </ul>
             </nav>
