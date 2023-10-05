@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from "../assets/logo.jpg";
 
 function Header() {
@@ -9,36 +9,43 @@ function Header() {
     }
 
     // Calculate the dynamic className for the header based on isNavVisible
-    const headerClassName = isNavVisible ? "w-full h-[40vh]" : "w-full h-[18vh]";
+    const headerClassName = isNavVisible ? "w-full h-[40vh]" : "w-full h-[16.5vh]";
+
+    useEffect(() => {
+        function handleResize() {
+            // Check the screen width and update isNavVisible accordingly
+            if (window.innerWidth >= 1024) {
+                setIsNavVisible(false);
+            }
+        }
+
+        // Add a resize event listener to detect screen width changes
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
     return (
         <header className={`relative flex items-center justify-between gap-5 lg:px-48 px-5 ${headerClassName}`}>
 
-            <div className="absolute left-5 top-2">
-                <img src={logo} alt="logo" className="w-[100%] h-auto"/>
+            <div className="absolute sm:left-32 left-5 top-2 ">
+                <img src={logo} alt="logo" className="w-[100%] cursor-pointer rounded-full"/>
             </div>
 
-            <nav className="lg:block hidden">
-                <ul className="flex items-center justify-center gap-10 text-lg">
-                    <li className="bg-[#e7171f] text-white py-1 px-3">Home</li>
-                    <li className="bg-[#e7171f] text-white py-1 px-3">About Us</li>
-                    <li className="bg-[#e7171f] text-white py-1 px-3">Cloude Software</li>
+            <nav className={`${isNavVisible ? "absolute top-[7.5rem] w-[92%] cursor-pointer" : "absolute top-10 right-5 lg:block hidden"}`}>
+                <ul className={`${isNavVisible ? "flex flex-col gap-3 text-lg" : "flex items-center justify-center gap-10 text-lg"}`}>
+                    <li className="bg-[#e7171f] text-white py-[6px] px-3">Home</li>
+                    <li className="bg-[#e7171f] text-white py-[6px] px-3">About Us</li>
+                    <li className="bg-[#e7171f] text-white py-[6px] px-3">Cloude Software</li>
                 </ul>
             </nav>
 
-            <div className="absolute right-7 top-9 border border-gray-300 pt-1 px-3 rounded-[4px] lg:hidden block z-50">
-                <button onClick={toggleNav}>
+            <div onClick={toggleNav} className="absolute right-7 top-9 border border-gray-300 p-1 px-3 rounded-[4px] lg:hidden block cursor-pointer">
                     <div className="bg-[url(./assets/hamberger.svg)] bg-cover bg-center w-8 h-8"></div>
-                </button>
             </div>
-
-            <nav className={`absolute top-[120px] w-[92%] cursor-pointer ${isNavVisible ? 'block' : 'hidden'}`}>
-                <ul className="flex flex-col gap-3 text-lg">
-                    <li className="bg-[#e7171f] text-white py-2 px-3">Home</li>
-                    <li className="bg-[#e7171f] text-white py-2 px-3">About Us</li>
-                    <li className="bg-[#e7171f] text-white py-2 px-3">Cloude Software</li>
-                </ul>
-            </nav>
         </header>
     );
 }
