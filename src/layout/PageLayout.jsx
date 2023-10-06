@@ -12,12 +12,13 @@ function PageLayout({ children }){
             <marquee behavior="scroll" direction="left">
                 <p className="text-[#0056b3] text-xl font-semibold">Freelancers/Franchise/Reseller Required in all major cities</p>
             </marquee>
+            
             <section className="mt-10 2xl:mx-24 xl:mx-5 mx-0">
                 <div className="carousel w-full">
                     <div id="item1" className="carousel-item w-full">
-                        <img src={banner1} className="w-full" />
+                        <img src={banner1} className="w-full z-50" />
                     </div> 
-                    <div id="item2" className="carousel-item w-full">
+                    <div id="item2" className="carousel-item w-full z-50">
                         <img src={banner2} className="w-full" />
                     </div> 
                 </div> 
@@ -28,6 +29,7 @@ function PageLayout({ children }){
             </section>
 
             {children}
+            
             <Footer/>
         </div>
     );
