@@ -12,24 +12,24 @@ function PageLayout({ children }){
             <marquee behavior="scroll" direction="left">
                 <p className="text-[#0056b3] text-xl font-semibold">Freelancers/Franchise/Reseller Required in all major cities</p>
             </marquee>
-            
+
             <section className="mt-10 2xl:mx-24 xl:mx-5 mx-0">
                 <div className="carousel w-full">
-                    <div id="item1" className="carousel-item w-full">
-                        <img src={banner1} className="w-full z-50" />
+                    <div id="item1" className="carousel-item w-full z-50">
+                        <img src={banner1} className="w-full" />
                     </div> 
                     <div id="item2" className="carousel-item w-full z-50">
                         <img src={banner2} className="w-full" />
                     </div> 
                 </div> 
                 <div className="flex justify-center w-full py-2 gap-2">
-                    <a href="#item1" className="btn btn-xs">1</a> 
-                    <a href="#item2" className="btn btn-xs">2</a> 
+                    <a href="#item1" className="btn btn-xs z-50">1</a> 
+                    <a href="#item2" className="btn btn-xs z-50">2</a> 
                 </div>
             </section>
 
             {children}
-            
+
             <Footer/>
         </div>
     );

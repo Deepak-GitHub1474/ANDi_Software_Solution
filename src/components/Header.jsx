@@ -60,11 +60,11 @@ function Header() {
                     <option value="">Hindi</option>
                 </select>
                 <div>
-                    <a href="https://translate.google.com/" target="_blank" className="flex items-center justify-center text-xs pt-1">
+                    {/* <a href="https://translate.google.com/" target="_blank" className="flex items-center justify-center text-xs pt-1">
                         <span>Powered by</span>
                         <img src={googleLogo} alt="google-logo" className="cursor-pointer ml-[2px]"/>
                         <span className="cursor-pointer text-[#444444] font-bold">Translate</span>
-                    </a>
+                    </a> */}
                 </div>
             </div>
 
