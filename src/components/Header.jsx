@@ -41,30 +41,30 @@ function Header() {
     return (
         <>
         {/* Top Header Section */}
-        <header className="bg-[#e7171f] flex flex-col justify-center lg:px-52 px-5">
-            <div className="lg:flex lg:items-center lg:justify-start justify-center text-center gap-2 pt-1 z-50">
-                <BsWhatsapp className="lg:block hidden text-[#e7171f]"/>
-                <p className="text-lg text-black font-medium"> +91-7015574125, +91-8810385787</p>
+        <header className="bg-[#e7171f] flex flex-col flex-wrap justify-center lg:px-10 xl:px-52">
+            <div className="lg:flex lg:items-center lg:justify-start justify-center text-center gap-2 mt-1 z-50">
+                <BsWhatsapp className="lg:block hidden text-[#e7171f] mb-3"/>
+                <p className="text-lg text-black"> +91-7015574125, +91-8810385787</p>
             </div>
-            <ul className="sm:flex sm:justify-end flex justify-center flex-wrap md:gap-3 gap-1 z-50">
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-4">Toll Free Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-4">Missed call Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-4">SMS Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-4">Whatsapp Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-4">Payment</li>
+            <ul className="md:flex md:justify-end md:items-center flex justify-center flex-wrap lg:gap-3 gap-1 z-50 mt-[-15px] pr-5">
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Toll Free Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Missed call Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">SMS Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Whatsapp Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Payment</li>
             </ul>
-            <div className="flex items-end flex-col justify-center gap-1 pt-1 pb-3">
+            <div className="md:flex flex-col md:items-end md:justify-center flex items-center gap-1 pb-3 mt-[-12px] pr-5">
                 <select name="" id="" className="w-40 h-[19px] text-xs font-medium ">
                     <option value="">Select Language</option>
                     <option value="">English</option>
                     <option value="">Hindi</option>
                 </select>
                 <div>
-                    {/* <a href="https://translate.google.com/" target="_blank" className="flex items-center justify-center text-xs pt-1">
-                        <span>Powered by</span>
+                    <a href="https://translate.google.com/" target="_blank" className="flex items-center justify-center text-xs pt-1 no-underline">
+                        <span className="text-[#666666]">Powered by</span>
                         <img src={googleLogo} alt="google-logo" className="cursor-pointer ml-[2px]"/>
                         <span className="cursor-pointer text-[#444444] font-bold">Translate</span>
-                    </a> */}
+                    </a>
                 </div>
             </div>
 
@@ -81,14 +81,14 @@ function Header() {
 
             <div className={`${isNavVisible ? "absolute sm:left-32 left-5 top-[7.5rem] right-7" : "absolute top-10 right-5 lg:block hidden"}`}>
                 <ul className={`${isNavVisible ? "flex flex-col gap-3 text-lg" : "flex items-center justify-center gap-10 text-lg"}`}>
-                    <Link to="/">
-                        <li className={`py-[6px] px-3 cursor-pointer ${isActiveLink("/") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>Home</li>
+                    <Link to="/" className=" no-underline">
+                        <li className={`py-[6px] px-3 cursor-pointer text-[#404040] ${isActiveLink("/") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>Home</li>
                     </Link>
-                    <Link to="/about">
-                        <li className={`py-[6px] px-3 cursor-pointer ${isActiveLink("/about") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>About Us</li>
+                    <Link to="/about" className=" no-underline">
+                        <li className={`py-[6px] px-3 cursor-pointer text-[#404040] ${isActiveLink("/about") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>About Us</li>
                     </Link>
-                    <Link to="/software">
-                        <li className={`py-[6px] px-3 cursor-pointer ${isActiveLink("/software") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>Cloude Software</li>
+                    <Link to="/software" className=" no-underline">
+                        <li className={`py-[6px] px-3 cursor-pointer text-[#404040] ${isActiveLink("/software") ? "bg-[#e7171f] text-white" : "hover:bg-[#f2f1f1]"}`}>Cloude Software</li>
                     </Link>
                 </ul>
             </div>

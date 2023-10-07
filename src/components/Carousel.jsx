@@ -1,25 +1,27 @@
-// import Carousel from 'react-bootstrap/Carousel';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import banner1 from "../assets/banner1.png"
-// import banner2 from "../assets/banner2.jpg"
+import banner1 from "../assets/banner1.png";
+import banner2 from "../assets/banner2.jpg";
 
-// function CarouselImg() {
-//   const imgArr = [banner1, banner2];
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-//   const carouselItems = imgArr.map((slide, idx) => (
-//     <Carousel.Item key={idx}>
-//       <img
-//         className="d-block w-100"
-//         src={slide}
-//       />
-//     </Carousel.Item>
-//   ));
+function App() {
+  const imgArr = [banner1, banner2];
 
-//   return (
-//     <Carousel interval={1000}>
-//       {carouselItems}
-//     </Carousel>
-//   );
-// }
+  const carouselItems = imgArr.map((slide, idx) => (
+    <Carousel.Item key={idx}>
+      <img
+        src={slide}
+      />
+    </Carousel.Item>
+  ));
 
-// export default CarouselImg;
+  return (
+    <div className="xl:mx-24">
+      <Carousel interval={1000}>
+        {carouselItems}
+      </Carousel>
+    </div>
+  );
+}
+
+export default App;
