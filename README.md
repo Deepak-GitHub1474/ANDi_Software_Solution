@@ -27,7 +27,7 @@
 
 ### Adding plugins and dependencies
     ```
-        npm install  react-router-dom react-icons daisyui  @tailwindcss/line-clamp
+        npm install  react-router-dom react-icons daisyui  @tailwindcss/line-clamp react-bootstrap bootstrap
     ```
 
 ### Install daisyUI as a Tailwind CSS plugin
