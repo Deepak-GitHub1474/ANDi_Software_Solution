@@ -22,6 +22,9 @@
 
 ## Setting tailwind css with vite project
 
+Welcome to the ANDi Software Solutions GitHub repository! This repository contains the source code for the 
+ANDi Software Solutions website.
+
 ### Check official documentation of tailwind for step by step setup [Link] ↓
 (https://tailwindcss.com/docs/guides/vite)
 
@@ -43,3 +46,13 @@
                 plugins: [require("daisyui")],
             }
     ```
+
+### Features
+1. Responsive design for various screen sizes.
+2. Products and services are dynamically loaded from data files.
+3. Interactive navigation menu.
+4. Contact information and Google Maps integration.
+5. Social media links for easy access.
+6. Navigator background highlight.
+
+

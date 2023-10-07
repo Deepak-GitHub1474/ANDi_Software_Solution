@@ -4,7 +4,7 @@ import banner2 from "../assets/banner2.jpg";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function CustomCarousel() {
   const imgArr = [banner1, banner2];
 
   const carouselItems = imgArr.map((slide, idx) => (
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default CustomCarousel;
