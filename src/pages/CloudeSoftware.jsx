@@ -8,7 +8,7 @@ function CloudeSoftware() {
 
     return (
         <PageLayout>
-            <div className="mb-6 mx-4">
+            <div className="mb-6 mx-3">
 
                 <div className="flex flex-col items-center justify-center ">
                     <div className="flex items-center justify-center gap-4 my-12 z-50">
@@ -21,11 +21,11 @@ function CloudeSoftware() {
                     <table key={el.id} className="w-fit border border-gray border-collapse mx-auto z-50">
                         <tbody>
                             <tr className="border-b border-t border-gray-300">
-                                <td className="border border-gray-300 p-4 align-top md:w-auto w-[120px]">
+                                <td className="border border-gray-300 p-3 align-top md:w-auto w-[110px]">
                                     <img src={el.coverImg} className="w-40" alt="Product-Cover" />
                                 </td>
-                                <td className="flex flex-col justify-center gap-3 p-2">
-                                    <h2 className="sm:text-3xl text-md text-center">{el.heading}</h2>
+                                <td className="flex flex-col justify-center p-2">
+                                    <h2 className="sm:text-3xl text-sm text-center">{el.heading}</h2>
                                     <p className="text-[#000] max-w-[42rem] sm:text-lg text-xs">{el.sector}</p>
                                     <p className="text-[#000] max-w-[42rem] sm:text-lg text-xs">{el.description}</p>
                                     <p className="text-[#000] max-w-[42rem] sm:text-lg text-xs">{el.quote}</p>
