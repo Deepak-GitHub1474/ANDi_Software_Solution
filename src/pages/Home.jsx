@@ -18,14 +18,14 @@ function Home() {
                     </div>
 
                     {data.map(el => (
-                    <table key={el.id} className="w-fit border border-gray border-collapse mx-auto z-50">
+                    <table key={el.id} className="sm:w-[75%] w-[100%] border border-gray border-collapse mx-auto z-50">
                         <tbody>
                             <tr className="border-b border-t border-gray-300">
                                 <td className="border border-gray-300 p-3 align-top md:w-auto w-[90px]">
-                                    <img src={el.coverImg} className="xs:w-36 w-28" alt="Product-Cover" />
+                                    <img src={el.coverImg} className="w-36" alt="Product-Cover" />
                                 </td>
-                                <td className="flex flex-col items-center justify-center p-2">
-                                    <h2 className="sm:text-3xl text-sm">{el.heading}</h2>
+                                <td className="flex flex-col items-center justify-center p-[6px]">
+                                    <h2 className="sm:text-3xl text-sm text-center">{el.heading}</h2>
                                     <p className="text-[#000] max-w-[56rem] sm:text-lg text-[11px]">{el.description}</p>
                                     <div>
                                         <button className="bg-[#28a745] text-white py-[6px] px-2 rounded-md sm:text-lg text-sm">{el.quote}</button>

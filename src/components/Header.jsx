@@ -47,11 +47,11 @@ function Header() {
                 <p className="text-lg text-black"> +91-7015574125, +91-8810385787</p>
             </div>
             <ul className="md:flex md:justify-end md:items-center flex justify-center flex-wrap lg:gap-3 gap-1 z-50 mt-[-15px] pr-5">
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Toll Free Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Missed call Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">SMS Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Whatsapp Panel</li>
-                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-3 mx-1">Payment</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-[10px] mx-1">Toll Free Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-[10px] mx-1">Missed call Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-[10px] mx-1">SMS Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-[10px] mx-1">Whatsapp Panel</li>
+                <li className="bg-[#a7090f] text-white text-lg py-[2px] px-[10px] mx-1">Payment</li>
             </ul>
             <div className="md:flex flex-col md:items-end md:justify-center flex items-center gap-1 pb-3 mt-[-12px] pr-5">
                 <select name="" id="" className="w-40 h-[19px] text-xs font-medium ">

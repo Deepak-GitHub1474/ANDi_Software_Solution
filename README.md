@@ -54,5 +54,16 @@ ANDi Software Solutions website.
 4. Contact information and Google Maps integration.
 5. Social media links for easy access.
 6. Navigator background highlight.
+7. Single Page Application.
+8. Scalable.
+9. Easy to extend whole website.
+10. Easy to maintain codeflow.
+
+### Routes
+1. Home                 ----> "/"
+2. About                ----> "/about"
+3. Cloude Software      ----> "/about"
+
+
 
 
